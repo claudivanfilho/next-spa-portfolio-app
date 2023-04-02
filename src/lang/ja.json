@@ -1,0 +1,14 @@
+{
+  "pokemons_count": "ポケモン：{count}",
+  "region": "領域",
+  "generations": "世代",
+  "fetch-generations-loading": "世代の読み込み",
+  "fetch-generation-error": "世代のフェッチ時にエラーが発生しました",
+  "fetch-pokemon-error": "ポケモンのフェッチ中にエラーが発生しました",
+  "no-pokemon-selected": "ポケモンが選択されていません",
+  "evolution-map": "進化マップ",
+  "stats": "統計",
+  "created-by": "によって作成された Claudivan",
+  "back-btn": "戻る",
+  "search-placeholder": "ポケモンを検索"
+}

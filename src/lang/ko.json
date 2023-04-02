@@ -1,0 +1,14 @@
+{
+  "pokemons_count": "포켓몬: {count}",
+  "region": "지역",
+  "generations": "세대",
+  "fetch-generations-loading": "세대 로드 중",
+  "fetch-generation-error": "세대 가져오기 오류",
+  "fetch-pokemon-error": "포켓몬 가져오기 오류",
+  "no-pokemon-selected": "선택된 포켓몬 없음",
+  "evolution-map": "진화 지도",
+  "stats": "통계",
+  "created-by": "만든 사람 Claudivan",
+  "back-btn": "뒤로",
+  "search-placeholder": "포켓몬 검색"
+}

@@ -1,0 +1,14 @@
+{
+  "pokemons_count": "Pokemons: {count}",
+  "region": "Região",
+  "generations": "Gerações",
+  "fetch-generations-loading": "Carregando gerações",
+  "fetch-generation-error": "Erro ao carregar geração",
+  "fetch-pokemon-error": "Erro ao carregar pokemon",
+  "no-pokemon-selected": "Nenhum pokemon selecionado",
+  "evolution-map": "Evoluções",
+  "stats": "Atributos",
+  "created-by": "Criado por Claudivan",
+  "back-btn": "Voltar",
+  "search-placeholder": "Pesquise por um pokemon"
+}
