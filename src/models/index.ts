@@ -111,6 +111,8 @@ export type EvolutionChainResponse = {
   id: number;
 };
 
+export type PokemonWithoutIntl = Omit<Pokemon, "descriptionTranslated" | "nameTranslated">;
+
 export type Pokemon = PokemonResponse &
   PokemonSpecieResponse & {
     descriptionTranslated: string;

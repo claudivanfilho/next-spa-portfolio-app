@@ -6,6 +6,7 @@ import {
   Pokemon,
   PokemonResponse,
   PokemonSpecieResponse,
+  PokemonWithoutIntl,
   Resource,
 } from "../models";
 
@@ -23,7 +24,7 @@ export async function fetchGenerations(): Promise<GenerationResponse[]> {
     });
 }
 
-export async function fetchPokemon(name: string): Promise<Pokemon | null> {
+export async function fetchPokemon(name: string): Promise<PokemonWithoutIntl | null> {
   const pokemonResponse: PokemonResponse = await fetch(`${API_URL}/pokemon/${name}`).then((res) =>
     res.json()
   );
