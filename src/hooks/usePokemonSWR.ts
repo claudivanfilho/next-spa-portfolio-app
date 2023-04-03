@@ -6,7 +6,7 @@ import { normalizePokemon } from "../services/dto.service";
 import useLocale from "./useLocale";
 
 /**
- * @param pName if pName is not provided it will assume the the name of the pokemon
+ * @param pName if pName is not provided it will assume the name of the pokemon
  * is the same from the url params
  */
 export default function usePokemonSWR(pName?: string) {

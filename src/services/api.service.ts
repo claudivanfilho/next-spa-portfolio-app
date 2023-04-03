@@ -3,7 +3,6 @@ import { mutate } from "swr";
 import { API_URL, GENERATION_API_URL } from "../config/constants";
 import {
   GenerationResponse,
-  Pokemon,
   PokemonResponse,
   PokemonSpecieResponse,
   PokemonWithoutIntl,

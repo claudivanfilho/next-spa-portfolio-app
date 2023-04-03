@@ -3,6 +3,7 @@
   "region": "Région",
   "generations": "Générations",
   "fetch-generations-loading": "Chargement des générations",
+  "fetch-generations-error": "Erreur lors de la récupération des générations",
   "fetch-generation-error": "Erreur lors de la récupération de la génération",
   "fetch-pokemon-error": "Erreur lors de la récupération de pokémon",
   "no-pokemon-selected": "Aucun pokémon sélectionné",

@@ -3,15 +3,15 @@ import { Link, useParams } from "react-router-dom";
 
 import usePokemonSWR from "../../hooks/usePokemonSWR";
 import { Resource } from "../../models/index";
-import PokemonStageCardLoader from "./loaders/PokemonStageCardLoader";
+import PokemonEvolutionCardLoader from "./loaders/PokemonEvolutionCardLoader";
 import PokemonPicture from "./PokemonPicture";
 
-const PokemonStageCard = ({ stage, className }: { className: string; stage: Resource }) => {
+const PokemonEvolutionCard = ({ stage, className }: { className: string; stage: Resource }) => {
   const { generationId, pokemonName } = useParams();
   const { pokemon, error } = usePokemonSWR(stage.name);
   const isSelected = pokemonName?.toLowerCase() === stage.name.toLowerCase();
 
-  if (!pokemon && !error) return <PokemonStageCardLoader />;
+  if (!pokemon && !error) return <PokemonEvolutionCardLoader />;
 
   return (
     <Link
@@ -38,4 +38,4 @@ const PokemonStageCard = ({ stage, className }: { className: string; stage: Reso
   );
 };
 
-export default PokemonStageCard;
+export default PokemonEvolutionCard;

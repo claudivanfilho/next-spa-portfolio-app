@@ -5,7 +5,7 @@ import useGenerationSWR from "../../hooks/useGenerationSWR";
 import GenerationDetails from "./GenerationDetails";
 import PokemonListing from "./PokemonListing";
 
-const GenerationSection = () => {
+const GenerationPage = () => {
   const { generation, error } = useGenerationSWR();
   const { pokemonName } = useParams();
   const { formatMessage } = useIntl();
@@ -35,4 +35,4 @@ const GenerationSection = () => {
   );
 };
 
-export default GenerationSection;
+export default GenerationPage;

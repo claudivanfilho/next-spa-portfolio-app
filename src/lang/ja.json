@@ -3,6 +3,7 @@
   "region": "領域",
   "generations": "世代",
   "fetch-generations-loading": "世代の読み込み",
+  "fetch-generations-error": "世代取得エラー",
   "fetch-generation-error": "世代のフェッチ時にエラーが発生しました",
   "fetch-pokemon-error": "ポケモンのフェッチ中にエラーが発生しました",
   "no-pokemon-selected": "ポケモンが選択されていません",

@@ -1,4 +1,4 @@
-import { act, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { rest } from "msw";
 
@@ -28,7 +28,7 @@ describe("Use cases of the initial page (Generations Page)", () => {
     renderApp();
 
     const generationLink = await screen.findByText(/Generation I/, { selector: "a" });
-    await act(() => userEvent.click(generationLink));
+    fireEvent.click(generationLink);
 
     expect(window.location.href).toBe("http://localhost/generation/1");
   });

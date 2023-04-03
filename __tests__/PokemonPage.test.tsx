@@ -1,6 +1,5 @@
-import { act, fireEvent, screen, waitFor, within } from "@testing-library/react";
+import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import { rest } from "msw";
-import userEvent from "@testing-library/user-event";
 
 import { POKEMON_API_URL } from "../src/config/constants";
 import { mockedServer } from "../jest.setup";

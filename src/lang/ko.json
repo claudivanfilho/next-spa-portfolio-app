@@ -3,6 +3,7 @@
   "region": "지역",
   "generations": "세대",
   "fetch-generations-loading": "세대 로드 중",
+  "fetch-generations-error": "세대 가져오기 오류",
   "fetch-generation-error": "세대 가져오기 오류",
   "fetch-pokemon-error": "포켓몬 가져오기 오류",
   "no-pokemon-selected": "선택된 포켓몬 없음",

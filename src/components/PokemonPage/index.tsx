@@ -4,11 +4,11 @@ import { useParams } from "react-router-dom";
 import usePokemonSWR from "../../hooks/usePokemonSWR";
 import PokemonHeaderLoader from "./loaders/PokemonHeaderLoader";
 import StatsLoader from "./loaders/StatsLoader";
-import PokemonEvolutionStages from "./PokemonEvolutionStages";
+import PokemonEvolutions from "./PokemonEvolutions";
 import PokemonHeader from "./PokemonHeader";
 import PokemonStats from "./PokemonStats";
 
-const PokemonDetailsSection = () => {
+const PokemonDetailsPage = () => {
   const { pokemonName } = useParams();
   const { formatMessage } = useIntl();
   const { error, pokemon } = usePokemonSWR();
@@ -40,7 +40,7 @@ const PokemonDetailsSection = () => {
         <h2 className="w-full mb-2 text-lg font-bold text-gray-600 uppercase">
           {formatMessage({ id: "evolution-map" })}
         </h2>
-        <PokemonEvolutionStages pokemon={pokemon} />
+        <PokemonEvolutions pokemon={pokemon} />
       </div>
       <div className="flex flex-col items-center mt-4">
         <h2 className="w-full text-lg font-bold text-gray-600 uppercase">
@@ -52,4 +52,4 @@ const PokemonDetailsSection = () => {
   );
 };
 
-export default PokemonDetailsSection;
+export default PokemonDetailsPage;

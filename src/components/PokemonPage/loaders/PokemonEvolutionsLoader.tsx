@@ -1,15 +1,15 @@
 import { ChevronRight } from "@material-ui/icons";
 
-import PokemonStageCardLoader from "./PokemonStageCardLoader";
+import PokemonEvolutionCardLoader from "./PokemonEvolutionCardLoader";
 
-const EvolutionStagesLoader = () => (
+const EvolutionEvolutionsLoader = () => (
   <div className="flex items-center justify-center w-full gap-4">
-    <PokemonStageCardLoader />
+    <PokemonEvolutionCardLoader />
     <ChevronRight fontSize="large" className="text-purple-300" />
-    <PokemonStageCardLoader />
+    <PokemonEvolutionCardLoader />
     <ChevronRight fontSize="large" className="text-purple-300" />
-    <PokemonStageCardLoader />
+    <PokemonEvolutionCardLoader />
   </div>
 );
 
-export default EvolutionStagesLoader;
+export default EvolutionEvolutionsLoader;
