@@ -1,9 +1,9 @@
 import Head from "next/head";
 
 import { SWRConfig } from "swr";
-import { SWR_OPTIONS } from "src/config/constants";
+import { SWR_OPTIONS } from "@/src/config/constants";
 import { BrowserRouter as Router } from "react-router-dom";
-import App from "src/App";
+import App from "@/src/components/App";
 
 export default function Home() {
   return (

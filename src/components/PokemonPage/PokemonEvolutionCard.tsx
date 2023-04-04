@@ -1,8 +1,8 @@
 import { ErrorRounded } from "@material-ui/icons";
 import { Link, useParams } from "react-router-dom";
 
-import usePokemonSWR from "../../hooks/usePokemonSWR";
-import { Resource } from "../../models/index";
+import usePokemonSWR from "@/src/hooks/usePokemonSWR";
+import { Resource } from "@/src/models/index";
 import PokemonEvolutionCardLoader from "./loaders/PokemonEvolutionCardLoader";
 import PokemonPicture from "./PokemonPicture";
 

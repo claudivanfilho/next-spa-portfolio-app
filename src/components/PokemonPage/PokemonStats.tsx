@@ -1,6 +1,6 @@
 import { Radar } from "react-chartjs-2";
 
-import { Pokemon } from "../../models";
+import { Pokemon } from "@/src/models";
 
 const PokemonStats = ({ pokemon }: { pokemon: Pokemon }) => {
   const labels = pokemon.stats.map((stat) => stat.stat.name.replace("special", "sp")) || [];

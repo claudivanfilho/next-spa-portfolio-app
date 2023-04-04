@@ -1,4 +1,4 @@
-import { Pokemon } from "../../models";
+import { Pokemon } from "@/src/models";
 
 export default function PokemonPicture({
   pokemon,

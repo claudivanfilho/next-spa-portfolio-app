@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 
-import { Resource } from "../../models/index";
+import { Resource } from "@/src/models/index";
 
 const PokemonListingItem = ({
   pokemon,

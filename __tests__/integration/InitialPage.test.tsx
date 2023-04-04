@@ -2,9 +2,9 @@ import { fireEvent, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { rest } from "msw";
 
-import { GENERATION_API_URL } from "../src/config/constants";
+import { GENERATION_API_URL } from "../../src/config/constants";
 import { mockedServer } from "../jest.setup";
-import { renderApp } from "./utils/utils";
+import { renderApp } from "../testUtils";
 
 describe("Use cases of the initial page (Generations Page)", () => {
   test("when initiated should render the generations page", async () => {
@@ -30,7 +30,7 @@ describe("Use cases of the initial page (Generations Page)", () => {
     const generationLink = await screen.findByText(/Generation I/, { selector: "a" });
     fireEvent.click(generationLink);
 
-    expect(window.location.href).toBe("http://localhost/generation/1");
+    expect(window.location.pathname).toBe("/generation/1");
   });
 
   test("when changed the lang selector should change the language of the page", async () => {

@@ -1,8 +1,8 @@
 import { Outlet, useParams } from "react-router-dom";
 
-import Breadcrumbs from "../components/Breadcrumbs";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Breadcrumbs from "../Breadcrumbs";
+import Footer from "../Footer";
+import Header from "../Header";
 
 const BaseLayout = () => {
   const { generationId } = useParams();

@@ -1,10 +1,10 @@
 import { fireEvent, screen, within } from "@testing-library/react";
 import { rest } from "msw";
 
-import { GENERATION_API_URL } from "../src/config/constants";
+import { GENERATION_API_URL } from "../../src/config/constants";
 import { mockedServer } from "../jest.setup";
-import { GENERATION_REPONSE_MOCK } from "./mockedResponses/GenerationResponseMock";
-import { renderApp } from "./utils/utils";
+import { GENERATION_REPONSE_MOCK } from "../mockedResponses/GenerationResponseMock";
+import { renderApp } from "../testUtils";
 
 describe("Use cases of the Generation Page", () => {
   test("when initiated the generation page should display the page info", async () => {
@@ -23,7 +23,7 @@ describe("Use cases of the Generation Page", () => {
 
     renderApp({ route: "/generation/1" });
 
-    await screen.findByText("Error on fetching generation");
+    await screen.findByText("Error on fetching generations");
   });
 
   test("when clicked in a pokemon in the listing should redirec to pokemon page", async () => {

@@ -1,6 +1,6 @@
 import { NavLink, useParams } from "react-router-dom";
 
-import { GenerationResponse } from "../../models/index";
+import { GenerationResponse } from "@/src/models/index";
 
 const GenerationListing = ({ generations }: { generations: GenerationResponse[] }) => {
   const { generationId } = useParams();

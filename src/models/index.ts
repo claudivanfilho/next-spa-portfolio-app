@@ -16,11 +16,11 @@ export type GenerationResponse = {
   nameTranslated?: string;
 };
 
-type SpriteObject = {
+export type SpriteObject = {
   back_default: string;
-  back_female: string;
+  back_female: string | null;
   back_shiny: string;
-  back_shiny_female: string;
+  back_shiny_female: string | null;
   front_default: string;
   front_female: null;
   front_shiny: string;
@@ -32,6 +32,7 @@ type SpriteObject = {
     };
     "official-artwork": {
       front_default: string;
+      front_shiny: string;
     };
   };
   versions: {
@@ -39,7 +40,7 @@ type SpriteObject = {
   };
 };
 
-export type PokemonResponse = {
+export interface PokemonResponse {
   id: number;
   name: string;
   order: number;
@@ -52,7 +53,7 @@ export type PokemonResponse = {
   }>;
   abilities: Array<{
     ability: Resource;
-    os_hidden: boolean;
+    is_hidden: boolean;
     slot: number;
   }>;
   base_experience: number;
@@ -61,7 +62,9 @@ export type PokemonResponse = {
   is_default: boolean;
   location_area_encounters: string;
   moves: any[];
-};
+  types: Array<{ slot: number; type: Resource }>;
+  weight: number;
+}
 
 export type PokemonSpecieResponse = {
   base_happiness: number;

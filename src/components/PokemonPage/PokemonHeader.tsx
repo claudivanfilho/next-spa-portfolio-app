@@ -1,4 +1,4 @@
-import { Pokemon } from "../../models";
+import { Pokemon } from "@/src/models";
 import PokemonAnimatedBG from "./PokemonAnimatedBG";
 import PokemonPicture from "./PokemonPicture";
 

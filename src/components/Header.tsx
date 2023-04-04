@@ -2,8 +2,8 @@ import { ChevronLeft } from "@material-ui/icons";
 import { useIntl } from "react-intl";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import { LANGS } from "../config/constants";
-import useLocale from "../hooks/useLocale";
+import { LANGS } from "@/src/config/constants";
+import useLocale from "@/src/hooks/useLocale";
 
 const Header = () => {
   const navigate = useNavigate();

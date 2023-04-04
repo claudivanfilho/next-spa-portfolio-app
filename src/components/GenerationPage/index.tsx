@@ -1,7 +1,7 @@
 import { useIntl } from "react-intl";
 import { Outlet, useParams } from "react-router-dom";
 
-import useGenerationSWR from "../../hooks/useGenerationSWR";
+import useGenerationSWR from "@/src/hooks/useGenerationSWR";
 import GenerationDetails from "./GenerationDetails";
 import PokemonListing from "./PokemonListing";
 

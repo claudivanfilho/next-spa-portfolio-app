@@ -1,7 +1,7 @@
 import { useIntl } from "react-intl";
 import { Outlet, useParams } from "react-router-dom";
 
-import useGenerationsSWR from "../../hooks/useGenerationsSWR";
+import useGenerationsSWR from "@/src/hooks/useGenerationsSWR";
 import GenerationListing from "./GenerationListing";
 
 const GenerationsPage = () => {

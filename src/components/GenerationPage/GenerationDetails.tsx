@@ -1,6 +1,6 @@
 import { useIntl } from "react-intl";
 
-import { GenerationResponse } from "../../models/index";
+import { GenerationResponse } from "@/src/models/index";
 
 const GenerationDetails = ({ generation }: { generation: GenerationResponse }) => {
   const { formatMessage } = useIntl();

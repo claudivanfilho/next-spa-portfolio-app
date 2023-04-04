@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 
-import GenerationPage from "./components/GenerationPage";
-import GenerationsPage from "./components/GenerationsPage";
-import PokemonDetailsPage from "./components/PokemonPage";
-import { IntlProviderLocal } from "./context/IntlContextLocal";
-import { LocaleProvider } from "./context/LocaleContext";
-import BaseLayout from "./layouts/BaseLayout";
+import GenerationPage from "./GenerationPage";
+import GenerationsPage from "@/src/components/GenerationsPage";
+import PokemonDetailsPage from "@/src/components/PokemonPage";
+import { IntlProviderLocal } from "@/src/context/IntlContextLocal";
+import { LocaleProvider } from "@/src/context/LocaleContext";
+import BaseLayout from "@/src/components/layouts/BaseLayout";
 
 export default function App() {
   return (

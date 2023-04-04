@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 
-import useGenerationSWR from "../hooks/useGenerationSWR";
-import usePokemonSWR from "../hooks/usePokemonSWR";
+import useGenerationSWR from "@/src/hooks/useGenerationSWR";
+import usePokemonSWR from "@/src/hooks/usePokemonSWR";
 
 const Breadcrumbs = () => {
   const { generationId, pokemonName } = useParams();

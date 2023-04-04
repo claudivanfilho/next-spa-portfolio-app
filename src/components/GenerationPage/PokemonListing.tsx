@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useIntl } from "react-intl";
 import { useParams } from "react-router-dom";
 
-import { Resource } from "../../models/index";
+import { Resource } from "@/src/models/index";
 import PokemonMiniCard from "./PokemonListingItem";
 
 const PokemonListing = ({ pokemons }: { pokemons: Resource[] }) => {

@@ -1,7 +1,7 @@
 import { ChevronRight } from "@material-ui/icons";
 
-import usePokemonEvolutionsSWR from "../../hooks/usePokemonEvolutionsSWR";
-import { Pokemon } from "../../models";
+import usePokemonEvolutionsSWR from "@/src/hooks/usePokemonEvolutionsSWR";
+import { Pokemon } from "@/src/models";
 import PokemonEvolutionsLoader from "./loaders/PokemonEvolutionsLoader";
 import PokemonEvolutionCard from "./PokemonEvolutionCard";
 

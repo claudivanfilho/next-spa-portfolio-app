@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import useSWR from "swr";
 
-import { fetchPokemon } from "../services/api.service";
-import { normalizePokemon } from "../services/dto.service";
+import { fetchPokemon } from "../../src/services/api.service";
+import { normalizePokemon } from "../../src/services/dto.service";
 import useLocale from "./useLocale";
 
 /**

@@ -8,7 +8,7 @@ import "whatwg-fetch";
 
 import { setupServer } from "msw/node";
 
-import { defaultHandlers } from "./__tests__/utils/mockServiceWorker";
+import { defaultHandlers } from "./mockServiceWorker";
 
 export const mockedServer = setupServer(...defaultHandlers);
 

@@ -1,4 +1,4 @@
-import { PokemonWithoutIntl } from "./../models/index";
+import { PokemonWithoutIntl } from "../models/index";
 import { DEFAULT_LANG } from "../config/constants";
 import { GenerationResponse, Pokemon } from "../models";
 
