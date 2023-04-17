@@ -1,4 +1,8 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    appDir: true,
+  },
   async rewrites() {
     return [
       // Rewrite everything else to use `pages/index`
@@ -9,3 +13,5 @@ module.exports = {
     ];
   },
 };
+
+module.exports = nextConfig;
