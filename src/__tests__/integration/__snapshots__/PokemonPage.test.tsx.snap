@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Use cases of the Pokemon Page when the pokemon selected has a invalid color should render the BG with the default color 1`] = `
+exports[`Pokemon Page Use Cases renders BG with default color for pokemon with invalid color 1`] = `
 <div
   class="w-full relative flex flex-col border-2 border-gray-400 rounded"
   data-testid="pokemon-header"

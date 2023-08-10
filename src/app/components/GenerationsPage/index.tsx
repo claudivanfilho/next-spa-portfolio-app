@@ -1,21 +1,11 @@
 import { useIntl } from "react-intl";
 import { Outlet, useParams } from "react-router-dom";
 
-import useGenerationsSWR from "@/app/hooks/useGenerationsSWR";
 import GenerationListing from "./GenerationListing";
 
 const GenerationsPage = () => {
-  const { generations, error } = useGenerationsSWR();
   const { formatMessage } = useIntl();
   const { generationId } = useParams();
-
-  if (error) {
-    return <div>{formatMessage({ id: "fetch-generations-error" })}</div>;
-  }
-
-  if (!generations) {
-    return <div>{formatMessage({ id: "fetch-generations-loading" })}</div>;
-  }
 
   return (
     <>
@@ -23,7 +13,7 @@ const GenerationsPage = () => {
         <h3 className="mb-3 text-3xl font-bold text-gray-700">
           {formatMessage({ id: "generations" })}
         </h3>
-        <GenerationListing generations={generations} />
+        <GenerationListing />
       </div>
       <Outlet />
     </>

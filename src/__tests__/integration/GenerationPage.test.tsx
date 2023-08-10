@@ -6,7 +6,7 @@ import { mockedServer } from "../jest.setup";
 import { GENERATION_REPONSE_MOCK } from "../mockedResponses/GenerationResponseMock";
 import { renderApp } from "../testUtils";
 
-describe("Use cases of the Generation Page", () => {
+describe("Generation Page Use Cases", () => {
   test("displays page info when initiated", async () => {
     renderApp({ route: "/generation/1" });
 
@@ -15,15 +15,19 @@ describe("Use cases of the Generation Page", () => {
   });
 
   test("displays error message when initiation has an error", async () => {
+    renderApp({ route: "/" });
+
+    const generationLink = await screen.findByText(/Generation I/, { selector: "a" });
+
     mockedServer.use(
       rest.get(`${GENERATION_API_URL}/1`, (req, res, ctx) => {
-        return res(ctx.status(500));
+        return res.once(ctx.status(500));
       })
     );
 
-    renderApp({ route: "/generation/1" });
+    fireEvent.click(generationLink);
 
-    await screen.findByText("Error on fetching generations");
+    await screen.findByText("Error on fetching generation");
   });
 
   test("redirects to pokemon page when a pokemon is clicked", async () => {

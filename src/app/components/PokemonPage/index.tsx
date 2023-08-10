@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 
 import usePokemonSWR from "@/app/hooks/usePokemonSWR";
 import PokemonHeaderLoader from "./loaders/PokemonHeaderLoader";
-import StatsLoader from "./loaders/StatsLoader";
 import PokemonEvolutions from "./PokemonEvolutions";
 import PokemonHeader from "./PokemonHeader";
 import PokemonStats from "./PokemonStats";
@@ -21,13 +20,6 @@ const PokemonDetailsPage = () => {
       </div>
     );
   }
-  if (!pokemonName) {
-    return (
-      <div className="flex w-full h-full text-xl">
-        {formatMessage({ id: "no-pokemon-selected" })}
-      </div>
-    );
-  }
 
   return (
     <div
@@ -37,16 +29,10 @@ const PokemonDetailsPage = () => {
       <h2 className="mb-3 text-3xl font-bold text-gray-600 uppercase">{name}</h2>
       {!pokemon ? <PokemonHeaderLoader /> : <PokemonHeader pokemon={pokemon} />}
       <div className="flex flex-col items-center mt-4">
-        <h2 className="w-full mb-2 text-lg font-bold text-gray-600 uppercase">
-          {formatMessage({ id: "evolution-map" })}
-        </h2>
         <PokemonEvolutions pokemon={pokemon} />
       </div>
       <div className="flex flex-col items-center mt-4">
-        <h2 className="w-full text-lg font-bold text-gray-600 uppercase">
-          {formatMessage({ id: "stats" })}
-        </h2>
-        {!pokemon ? <StatsLoader /> : <PokemonStats pokemon={pokemon} />}
+        <PokemonStats pokemon={pokemon} />
       </div>
     </div>
   );

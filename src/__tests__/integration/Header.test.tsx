@@ -1,8 +1,8 @@
 import { fireEvent, screen, waitFor } from "@testing-library/react";
 import { renderApp } from "../testUtils";
 
-describe("Use cases of Header", () => {
-  test("when back button is clicked should return to the previous page", async () => {
+describe("Header Use Cases", () => {
+  test("returns to the previous page when the back button is clicked", async () => {
     renderApp();
 
     const generationLink = await screen.findByText(/Generation I/, { selector: "a" });

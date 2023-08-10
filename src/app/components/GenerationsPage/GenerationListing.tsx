@@ -1,13 +1,26 @@
-import { GenerationResponse } from "@/app/models/index";
 import GenerationListingItem from "./GenerationListingItem";
+import useGenerationsSWR from "@/app/hooks/useGenerationsSWR";
+import { useIntl } from "react-intl";
+import GenerationListingItemLoader from "./GenerationListingItemLoader";
 
-const GenerationListing = ({ generations }: { generations: GenerationResponse[] }) => {
+const GenerationListing = () => {
+  const { formatMessage } = useIntl();
+  const { generations, error } = useGenerationsSWR();
+
+  if (error) {
+    return <div>{formatMessage({ id: "fetch-generations-error" })}</div>;
+  }
+
   return (
     <>
-      <div className="flex flex-col">
-        {generations.map(({ id, nameTranslated }) => (
-          <GenerationListingItem key={id} id={id} name={nameTranslated!} />
-        ))}
+      <div className="grid">
+        {generations ? (
+          generations.map(({ id, nameTranslated }) => (
+            <GenerationListingItem key={id} id={id} name={nameTranslated!} />
+          ))
+        ) : (
+          <GenerationListingItemLoader />
+        )}
       </div>
     </>
   );

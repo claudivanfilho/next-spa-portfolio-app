@@ -6,8 +6,23 @@ import { getPokemonSpecieResponse } from "../mockedResponses/PokemonSpecieRespon
 import { mockedServer } from "../jest.setup";
 import { renderApp } from "../testUtils";
 
-describe("Use cases of the Pokemon Page", () => {
-  test("when initiated the Pokemon Page should display the pokemon info", async () => {
+describe("Pokemon Page Use Cases", () => {
+  test("renders BG with default color for pokemon with invalid color", async () => {
+    mockedServer.use(
+      rest.get(`${POKEMON_SPECIE_API_URL}/:pokemonId`, (req, res, ctx) => {
+        const response = { ...getPokemonSpecieResponse(1) };
+        response.color.name = "none";
+        return res.once(ctx.json(response));
+      })
+    );
+
+    renderApp({ route: "/generation/1/pokemon/bulbasaur" });
+
+    const header = await screen.findByTestId("pokemon-header");
+    expect(header).toMatchSnapshot();
+  });
+
+  test("displays pokemon info when initiated", async () => {
     renderApp({ route: "/generation/1/pokemon/bulbasaur" });
 
     const pokemonSection = await screen.findByTestId("pokemon-details-section");
@@ -18,7 +33,7 @@ describe("Use cases of the Pokemon Page", () => {
     await within(pokemonSection).findByTestId("pokemon-header");
   });
 
-  test("when initiated the Pokemon Page with error should display the error message", async () => {
+  test("displays an error message when fetching pokemon fails", async () => {
     mockedServer.use(
       rest.get(`${POKEMON_API_URL}/bulbasaur`, (req, res, ctx) => {
         return res.once(ctx.status(500));
@@ -30,7 +45,7 @@ describe("Use cases of the Pokemon Page", () => {
     await screen.findByText("Error on fetching pokemon");
   });
 
-  test("when clicked in the pokemon evolution should change the page to the clicked pokemon", async () => {
+  test("changes page to clicked pokemon when pokemon evolution is clicked", async () => {
     renderApp({ route: "/generation/1/pokemon/bulbasaur" });
 
     const evolutionStages = await screen.findByTestId("pokemon-evolution-stages");
@@ -41,7 +56,7 @@ describe("Use cases of the Pokemon Page", () => {
     expect(window.location.pathname).toBe("/generation/1/pokemon/ivysaur");
   });
 
-  test("when occurs an error when fetching the evolution should display the error component", async () => {
+  test("displays error component when evolution fetching fails", async () => {
     mockedServer.use(
       rest.get(`${POKEMON_API_URL}/ivysaur`, (req, res, ctx) => {
         return res.once(ctx.status(500));
@@ -51,21 +66,5 @@ describe("Use cases of the Pokemon Page", () => {
     renderApp({ route: "/generation/1/pokemon/bulbasaur" });
 
     await within(await screen.findByTestId("pokemon-evolution-stages")).findByText("Not Found");
-    await within(await screen.findByTestId("pokemon-evolution-stages")).findByText("Not Found");
-  });
-
-  test("when the pokemon selected has a invalid color should render the BG with the default color", async () => {
-    mockedServer.use(
-      rest.get(`${POKEMON_SPECIE_API_URL}/:pokemonId`, (req, res, ctx) => {
-        const response = { ...getPokemonSpecieResponse(1) };
-        response.color.name = "test";
-        return res.once(ctx.json(response));
-      })
-    );
-
-    renderApp({ route: "/generation/1/pokemon/bulbasaur" });
-
-    const header = await screen.findByTestId("pokemon-header");
-    expect(header).toMatchSnapshot();
   });
 });

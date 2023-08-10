@@ -1,28 +1,19 @@
-import { TextField } from "@material-ui/core";
-import { Search } from "@material-ui/icons";
 import { useState } from "react";
-import { useIntl } from "react-intl";
 import { useParams } from "react-router-dom";
 
 import { Resource } from "@/app/models/index";
 import PokemonMiniCard from "./PokemonListingItem";
+import ListingSearch from "./ListingSearch";
 
 const PokemonListing = ({ pokemons }: { pokemons: Resource[] }) => {
   const { pokemonName } = useParams();
-  const { formatMessage } = useIntl();
   const [searchText, setSearchText] = useState("");
   const filteredPokemons = pokemons.filter((p) => p.name.includes(searchText));
 
   return (
     <div className="flex flex-col" data-testid="pokemon-listing">
       <div className="flex items-center justify-between w-full pr-2 mt-2 mb-3">
-        <TextField
-          onChange={(event) => setSearchText(event.target.value)}
-          id="search-input"
-          label={formatMessage({ id: "search-placeholder" })}
-          className="w-full"
-        />
-        <Search className="mt-4 mr-2" />
+        <ListingSearch setSearchText={setSearchText} />
       </div>
       <div
         style={{ height: "calc(100vh - 350px)" }}
