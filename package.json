@@ -1,4 +1,5 @@
 {
+  "name": "next-spa-portfolio-app",
   "private": true,
   "scripts": {
     "dev": "next dev",

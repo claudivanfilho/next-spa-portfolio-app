@@ -7,14 +7,14 @@ import { GENERATION_REPONSE_MOCK } from "../mockedResponses/GenerationResponseMo
 import { renderApp } from "../testUtils";
 
 describe("Use cases of the Generation Page", () => {
-  test("when initiated the generation page should display the page info", async () => {
+  test("displays page info when initiated", async () => {
     renderApp({ route: "/generation/1" });
 
     await screen.findByText(GENERATION_REPONSE_MOCK.main_region.name);
     await screen.findByText(`Pokemons: ${GENERATION_REPONSE_MOCK.pokemon_species.length}`);
   });
 
-  test("when initiated the generation page with error should display the error message", async () => {
+  test("displays error message when initiation has an error", async () => {
     mockedServer.use(
       rest.get(`${GENERATION_API_URL}/1`, (req, res, ctx) => {
         return res(ctx.status(500));
@@ -26,7 +26,7 @@ describe("Use cases of the Generation Page", () => {
     await screen.findByText("Error on fetching generations");
   });
 
-  test("when clicked in a pokemon in the listing should redirec to pokemon page", async () => {
+  test("redirects to pokemon page when a pokemon is clicked", async () => {
     renderApp({ route: "/generation/1" });
     const pokemonLink = await within(await screen.findByTestId("pokemon-listing")).findByText(
       "bulbasaur",
@@ -40,7 +40,7 @@ describe("Use cases of the Generation Page", () => {
     expect(window.location.pathname).toBe("/generation/1/pokemon/bulbasaur");
   });
 
-  test("when searching for a pokemon should display the correct one in the listing", async () => {
+  test("displays correct pokemon when searching", async () => {
     renderApp({ route: "/generation/1" });
 
     const wrapper = await screen.findByTestId("pokemon-listing");
@@ -48,13 +48,15 @@ describe("Use cases of the Generation Page", () => {
     fireEvent.change(searchInput, { target: { value: "but" } });
 
     const pokemonsResult = within(wrapper).queryAllByRole("link");
-    expect(pokemonsResult.length).toBe(3);
-    expect(pokemonsResult[0].innerHTML).toBe("kabuto");
-    expect(pokemonsResult[1].innerHTML).toBe("butterfree");
-    expect(pokemonsResult[2].innerHTML).toBe("kabutops");
+    const expectedPokemons = ["kabuto", "butterfree", "kabutops"];
+
+    expect(pokemonsResult.length).toBe(expectedPokemons.length);
+    pokemonsResult.forEach((pokemonResult, index) => {
+      expect(pokemonResult.innerHTML).toBe(expectedPokemons[index]);
+    });
   });
 
-  test("when searching for an unknown pokemon should display nothing in the listing", async () => {
+  test("displays nothing when searching for an unknown pokemon", async () => {
     renderApp({ route: "/generation/1" });
 
     const wrapper = await screen.findByTestId("pokemon-listing");

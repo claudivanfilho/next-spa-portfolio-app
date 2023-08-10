@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Next SPA Portfolio App</title>
+        <metadata>Portfolio App using Next.js + Typescript + Tailwind + Jest</metadata>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
