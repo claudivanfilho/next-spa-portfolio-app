@@ -30,9 +30,7 @@ const PokemonEvolutionCard = ({ stage, className }: { className: string; stage: 
             Not Found
           </div>
         )}
-        <span className="mt-2 text-xs text-gray-600 md:text-sm">
-          {pokemon?.nameTranslated || stage.name}
-        </span>
+        <span className="mt-2 text-xs text-gray-600 md:text-sm">{stage.name}</span>
       </div>
     </Link>
   );
