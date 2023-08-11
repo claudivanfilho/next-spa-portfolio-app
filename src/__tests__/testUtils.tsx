@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { SWRConfig } from "swr";
 
-import App from "@/app/components/Layout";
+import Index from "@/app";
 
 export const renderApp = ({
   route = "/",
@@ -27,7 +27,7 @@ export const renderApp = ({
   return render(
     <BrowserRouter>
       <SWRConfig value={swrConfig}>
-        <App />
+        <Index />
       </SWRConfig>
     </BrowserRouter>
   );

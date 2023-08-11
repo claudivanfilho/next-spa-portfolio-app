@@ -2,7 +2,7 @@ import Head from "next/head";
 import { BrowserRouter as Router } from "react-router-dom";
 import { SWRConfig } from "swr";
 
-import App from "@/app/components/Layout";
+import Index from "@/app";
 import { SWR_OPTIONS } from "@/app/config/constants";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
 
       <SWRConfig value={SWR_OPTIONS}>
         <Router>
-          <App />
+          <Index />
         </Router>
       </SWRConfig>
     </div>

@@ -3,9 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import { IntlProviderLocal } from "@/app/context/IntlContextLocal";
 import { LocaleProvider } from "@/app/context/LocaleContext";
 
-import { App } from "./App";
+import { App } from "./components/App";
 
-export default function Layout() {
+export default function Index() {
   return (
     <LocaleProvider>
       <IntlProviderLocal>
