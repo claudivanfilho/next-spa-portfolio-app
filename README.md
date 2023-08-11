@@ -24,7 +24,7 @@ Technologies and Concepts Utilized in This Project:
 
 This app is a sample application of a Single Page Application (SPA) using Next.js, as recommended by [react.dev](https://react.dev/learn/start-a-new-react-project#production-grade-react-frameworks), for initiating a new project. The project aims to utilize only React features and not Next.js features, with the intent of focusing on front-end skills.
 
-The app uses an immutable API called [POKE API](https://pokeapi.co/), and for caching requests and optimizing website performance, I have chosen to adopt the MSW cache strategy.
+The app uses an immutable API called [POKE API](https://pokeapi.co/), and for caching requests and optimizing website performance, I have chosen to adopt the [SWR](https://swr.vercel.app/pt-BR) cache strategy.
 
 #### Navigation
 
