@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 
 import useGenerationSWR from "@/app/hooks/useGenerationSWR";
+
 import GenerationDetails from "./GenerationDetails";
-import PokemonListing from "./PokemonListing";
 import GenerationError from "./GenerationError";
+import PokemonListing from "./PokemonListing";
 
 const GenerationPage = () => {
   const { generation, error } = useGenerationSWR();

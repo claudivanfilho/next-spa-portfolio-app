@@ -6,11 +6,12 @@ import {
   POKEMON_API_URL,
   POKEMON_SPECIE_API_URL,
 } from "@/app/config/constants";
+
 import { EVOLUTON_CHAIN_RESPONSE_MOCK } from "./mockedResponses/EvolutionChainResponse";
 import { GENERATION_REPONSE_MOCK } from "./mockedResponses/GenerationResponseMock";
 import { GENERATIONS_RESPONSE_MOCK } from "./mockedResponses/GenerationsResponseMock";
-import { getPokemonSpecieResponse } from "./mockedResponses/PokemonSpecieResponse";
 import { getPokemonResponseMock } from "./mockedResponses/PokemonResponseMock";
+import { getPokemonSpecieResponse } from "./mockedResponses/PokemonSpecieResponse";
 
 export const defaultHandlers = [
   rest.get(GENERATION_API_URL, (req, res, ctx) => {

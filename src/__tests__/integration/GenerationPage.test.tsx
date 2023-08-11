@@ -2,6 +2,7 @@ import { fireEvent, screen, within } from "@testing-library/react";
 import { rest } from "msw";
 
 import { GENERATION_API_URL } from "@/app/config/constants";
+
 import { mockedServer } from "../jest.setup";
 import { GENERATION_REPONSE_MOCK } from "../mockedResponses/GenerationResponseMock";
 import { renderApp } from "../testUtils";

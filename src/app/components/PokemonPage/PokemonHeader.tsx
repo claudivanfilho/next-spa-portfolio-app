@@ -1,4 +1,5 @@
 import { Pokemon } from "@/app/models";
+
 import PokemonAnimatedBG from "./PokemonAnimatedBG";
 import PokemonPicture from "./PokemonPicture";
 

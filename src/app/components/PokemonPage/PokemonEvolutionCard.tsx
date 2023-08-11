@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 
 import usePokemonSWR from "@/app/hooks/usePokemonSWR";
 import { Resource } from "@/app/models/index";
+
 import PokemonEvolutionCardLoader from "./loaders/PokemonEvolutionCardLoader";
 import PokemonPicture from "./PokemonPicture";
 

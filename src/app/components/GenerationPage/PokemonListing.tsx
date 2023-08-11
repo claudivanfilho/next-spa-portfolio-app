@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { Resource } from "@/app/models/index";
-import PokemonMiniCard from "./PokemonListingItem";
+
 import ListingSearch from "./ListingSearch";
+import PokemonMiniCard from "./PokemonListingItem";
 
 const PokemonListing = ({ pokemons }: { pokemons: Resource[] }) => {
   const { pokemonName } = useParams();

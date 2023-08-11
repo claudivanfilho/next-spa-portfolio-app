@@ -2,9 +2,9 @@ import { useParams } from "react-router-dom";
 
 import Breadcrumbs from "./Breadcrumbs";
 import Footer from "./Footer";
-import Header from "./Header";
-import GenerationsPage from "./GenerationsPage/GenerationsPage";
 import GenerationPage from "./GenerationPage/GenerationPage";
+import GenerationsPage from "./GenerationsPage/GenerationsPage";
+import Header from "./Header";
 import { PokemonPage } from "./PokemonPage/PokemonPage";
 
 export const App = () => {

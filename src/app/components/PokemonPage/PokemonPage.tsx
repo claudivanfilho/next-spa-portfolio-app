@@ -2,6 +2,7 @@ import { useIntl } from "react-intl";
 import { useParams } from "react-router-dom";
 
 import usePokemonSWR from "@/app/hooks/usePokemonSWR";
+
 import PokemonHeaderLoader from "./loaders/PokemonHeaderLoader";
 import PokemonEvolutions from "./PokemonEvolutions";
 import PokemonHeader from "./PokemonHeader";

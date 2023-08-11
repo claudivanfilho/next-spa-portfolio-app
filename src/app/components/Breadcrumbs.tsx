@@ -1,8 +1,8 @@
+import { useIntl } from "react-intl";
 import { Link } from "react-router-dom";
 
 import useGenerationSWR from "@/app/hooks/useGenerationSWR";
 import usePokemonSWR from "@/app/hooks/usePokemonSWR";
-import { useIntl } from "react-intl";
 
 const Breadcrumbs = () => {
   const { generation } = useGenerationSWR();

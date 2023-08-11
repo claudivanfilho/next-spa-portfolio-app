@@ -1,6 +1,8 @@
-import GenerationListingItem from "./GenerationListingItem";
-import useGenerationsSWR from "@/app/hooks/useGenerationsSWR";
 import { useIntl } from "react-intl";
+
+import useGenerationsSWR from "@/app/hooks/useGenerationsSWR";
+
+import GenerationListingItem from "./GenerationListingItem";
 import GenerationListingItemLoader from "./GenerationListingItemLoader";
 
 const GenerationListing = () => {

@@ -1,10 +1,11 @@
 import { ChevronRight } from "@material-ui/icons";
+import { useIntl } from "react-intl";
 
 import usePokemonEvolutionsSWR from "@/app/hooks/usePokemonEvolutionsSWR";
 import { Pokemon, Resource } from "@/app/models";
+
 import PokemonEvolutionsLoader from "./loaders/PokemonEvolutionsLoader";
 import PokemonEvolutionCard from "./PokemonEvolutionCard";
-import { useIntl } from "react-intl";
 
 const PokemonEvolutions = ({ pokemon }: { pokemon?: Pokemon | null }) => {
   const { evolutions } = usePokemonEvolutionsSWR(pokemon);

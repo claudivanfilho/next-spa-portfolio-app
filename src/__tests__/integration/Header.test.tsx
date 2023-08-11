@@ -1,4 +1,5 @@
 import { fireEvent, screen, waitFor } from "@testing-library/react";
+
 import { renderApp } from "../testUtils";
 
 describe("Header Use Cases", () => {

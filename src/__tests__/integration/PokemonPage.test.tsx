@@ -2,8 +2,9 @@ import { fireEvent, screen, waitFor, within } from "@testing-library/react";
 import { rest } from "msw";
 
 import { POKEMON_API_URL, POKEMON_SPECIE_API_URL } from "@/app/config/constants";
-import { getPokemonSpecieResponse } from "../mockedResponses/PokemonSpecieResponse";
+
 import { mockedServer } from "../jest.setup";
+import { getPokemonSpecieResponse } from "../mockedResponses/PokemonSpecieResponse";
 import { renderApp } from "../testUtils";
 
 describe("Pokemon Page Use Cases", () => {

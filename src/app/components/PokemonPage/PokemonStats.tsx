@@ -1,7 +1,8 @@
 import { Radar } from "react-chartjs-2";
+import { useIntl } from "react-intl";
 
 import { Pokemon } from "@/app/models";
-import { useIntl } from "react-intl";
+
 import StatsLoader from "./loaders/StatsLoader";
 
 const PokemonStats = ({ pokemon }: { pokemon?: Pokemon | null }) => {

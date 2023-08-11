@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import { rest } from "msw";
 
 import { GENERATION_API_URL } from "@/app/config/constants";
+
 import { mockedServer } from "../jest.setup";
 import { renderApp } from "../testUtils";
 

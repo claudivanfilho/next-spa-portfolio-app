@@ -1,7 +1,6 @@
 import { FC, ReactNode } from "react";
 import { IntlProvider } from "react-intl";
 
-import useLocale from "../hooks/useLocale";
 import deMessages from "../../lang/de.json";
 import enMessages from "../../lang/en.json";
 import esMessages from "../../lang/es.json";
@@ -9,6 +8,7 @@ import frMessages from "../../lang/fr.json";
 import jaMessages from "../../lang/ja.json";
 import koMessages from "../../lang/ko.json";
 import ptMessages from "../../lang/pt.json";
+import useLocale from "../hooks/useLocale";
 
 const messages: { [key: string]: Record<string, string> } = {
   de: deMessages,
