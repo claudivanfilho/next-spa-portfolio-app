@@ -6,10 +6,10 @@ export function normalizeGeneration(
   generation: GenerationResponse,
   locale: string
 ): GenerationResponse {
-  const nameDefault = generation?.names.find((n) => n.language.name === DEFAULT_LANG)!.name;
+  const nameDefault = generation.names.find((n) => n.language.name === DEFAULT_LANG)!.name;
   return {
     ...generation,
-    nameTranslated: generation?.names.find((n) => n.language.name === locale)?.name || nameDefault,
+    nameTranslated: generation.names.find((n) => n.language.name === locale)?.name || nameDefault,
   };
 }
 
@@ -21,8 +21,7 @@ export function normalizePokemon(pokemon: PokemonWithoutIntl, locale: string): P
     pokemon?.flavor_text_entries.find((text) => text.language.name === locale)?.flavor_text ||
     defaultDescription;
   const defaultName = pokemon?.names.find((n) => n.language.name === DEFAULT_LANG)!.name;
-  const nameTranslated =
-    pokemon?.names.find((n) => n.language.name === locale)?.name || defaultName;
+  const nameTranslated = pokemon.names.find((n) => n.language.name === locale)?.name || defaultName;
 
   return {
     ...pokemon,

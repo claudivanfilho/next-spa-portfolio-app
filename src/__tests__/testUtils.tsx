@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import { SWRConfig } from "swr";
 
-import App from "@/app/components/App";
+import App from "@/app/components/Layout";
 
 export const renderApp = ({
   route = "/",

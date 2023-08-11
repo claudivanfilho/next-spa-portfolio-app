@@ -8,8 +8,8 @@ const PokemonStats = ({ pokemon }: { pokemon?: Pokemon | null }) => {
   const { formatMessage } = useIntl();
 
   const renderRadar = (pokemon: Pokemon) => {
-    const labels = pokemon.stats.map((stat) => stat.stat.name.replace("special", "sp")) || [];
-    const values = pokemon.stats.map((stat) => stat.base_stat) || [];
+    const labels = pokemon.stats.map((stat) => stat.stat.name.replace("special", "sp"));
+    const values = pokemon.stats.map((stat) => stat.base_stat);
     const data = {
       labels,
       datasets: [

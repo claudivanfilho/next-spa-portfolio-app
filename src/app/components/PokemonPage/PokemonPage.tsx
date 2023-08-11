@@ -7,7 +7,7 @@ import PokemonEvolutions from "./PokemonEvolutions";
 import PokemonHeader from "./PokemonHeader";
 import PokemonStats from "./PokemonStats";
 
-const PokemonDetailsPage = () => {
+export const PokemonPage = () => {
   const { pokemonName } = useParams();
   const { formatMessage } = useIntl();
   const { error, pokemon } = usePokemonSWR();
@@ -37,5 +37,3 @@ const PokemonDetailsPage = () => {
     </div>
   );
 };
-
-export default PokemonDetailsPage;

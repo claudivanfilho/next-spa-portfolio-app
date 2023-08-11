@@ -62,6 +62,18 @@ In all of my Front End projects (SPAs), I prefer to follow the [testing trophy](
 
 All test cases are behaviorally oriented, following the principles of [Behavior-Driven Development (BDD)](https://medium.com/javascript-scene/behavior-driven-development-bdd-and-functional-testing-62084ad7f1f2), with a focus on capturing user interactions with the system.
 
+#### Coverage
+
+As can be seen in the report below, the Testing Trophy strategy does not significantly affect testing coverage. This approach results in more readable and fewer tests, along with a reduction in the number of mocks when compared to the [Testing Pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) strategy.
+
+```bash
+------------------------------------|---------|----------|---------|---------|
+File                                | % Stmts | % Branch | % Funcs | % Lines |
+------------------------------------|---------|----------|---------|---------|
+All files                           |   97.46 |    92.94 |   96.74 |   97.65 |
+
+```
+
 ## Development
 
 Install the dependencies

@@ -3,7 +3,7 @@ import Head from "next/head";
 import { SWRConfig } from "swr";
 import { SWR_OPTIONS } from "@/app/config/constants";
 import { BrowserRouter as Router } from "react-router-dom";
-import App from "@/app/components/App";
+import App from "@/app/components/Layout";
 
 export default function Home() {
   return (

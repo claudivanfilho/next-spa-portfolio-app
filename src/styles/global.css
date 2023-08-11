@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.pokemon-listing {
+  height: calc(100vh - 350px);
+}

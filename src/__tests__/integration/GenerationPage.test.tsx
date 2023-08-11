@@ -14,7 +14,7 @@ describe("Generation Page Use Cases", () => {
     await screen.findByText(`Pokemons: ${GENERATION_REPONSE_MOCK.pokemon_species.length}`);
   });
 
-  test("displays error message when initiation has an error", async () => {
+  test("displays error message when the generation is invalid", async () => {
     renderApp({ route: "/" });
 
     const generationLink = await screen.findByText(/Generation I/, { selector: "a" });
