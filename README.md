@@ -9,6 +9,7 @@
 
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.3.0-38B2AC)](https://tailwindcss.com/)
 [![Internationalization](https://img.shields.io/badge/Internationalization-React%20Intl-blueviolet)](https://github.com/formatjs/react-intl)
+[![Sentry](https://img.shields.io/badge/Monitoring%20with-Sentry-purple)](https://sentry.io/)
 
 Technologies and Concepts Utilized in This Project:
 
